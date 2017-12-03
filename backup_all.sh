@@ -10,6 +10,7 @@ elements=(
 ~/.tmuxStarterScript
 ~/update.sh
 ~/screen_colors.sh
+~/.oh-my-zsh/oh-my-zsh.sh
 #DIRS
 ~/.config/i3
 ~/.config/rofi
