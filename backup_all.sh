@@ -10,16 +10,6 @@ elements=(
 ~/.tmuxStarterScript
 ~/update.sh
 ~/screen_colors.sh
-~/.oh-my-zsh/oh-my-zsh.sh
-
-#workrelated
-/etc/memcached.conf
-/etc/php/5.6/apache2/php.ini
-/etc/php/5.6/mods-available/xdebug.ini
-/etc/php/5.6/mods-available/opcache.ini
-/etc/apache2/apache2.conf
-/etc/apache2/sites-available/example.dev.conf
-
 #DIRS
 ~/.config/i3
 ~/.config/rofi

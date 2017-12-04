@@ -1,6 +1,6 @@
 #!/bin/bash
 # $1 is + or - percentage
-SINK=$(pactl list short sinks | cut -c1-3)
+SINK=$(pactl list short sinks | cut -c1-2)
 
 pactl set-sink-mute $SINK toggle
 

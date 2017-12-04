@@ -102,9 +102,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 ## POWERLINE FONTS FIX
-if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh  ]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
-fi
+#if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh  ]; then
+#    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
+#fi
 # /usr/lib/python2.7/dist-packages/powerline...
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases

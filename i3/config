@@ -50,7 +50,7 @@ bindsym $mod+n exec $term -e ranger
 bindsym $mod+Shift+q kill
 
 ## Start custom program launcher - rofi
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18" #-lines 3 -eh 2 -padding 50 -opacity "85"
+bindsym $mod+d exec rofi -show run -opacity "30" -font "System San Francisco Display 18" #-lines 3 -eh 2 -padding 50 -opacity "85"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -154,10 +154,10 @@ bindsym $mod+Shift+s exec ~/.config/i3/swap_wspaces.py
 
 
 
-exec --no-startup-id i3-msg '$wspace1; exec $term'
-exec --no-startup-id i3-msg '$wspace1; exec $term'
-exec --no-startup-id i3-msg '$wspace2; exec ranger'
-exec --no-startup-id i3-msg '$wspace8; exec htop'
+exec i3-msg '$wspace1; exec $term'
+exec i3-msg '$wspace1; exec $term'
+exec i3-msg '$wspace2; exec ranger'
+exec i3-msg '$wspace8; exec htop'
 
 assign [class="Google-chrome"] $wspace3
 assign [class="Firefox"] $wspace4

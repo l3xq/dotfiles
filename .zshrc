@@ -101,9 +101,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 setopt interactivecomments
 
 # Powerline fonts fix
-if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
-fi
+#if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
+#    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+#fi
 
 #tmux fix
 TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
