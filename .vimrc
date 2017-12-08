@@ -21,6 +21,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-scripts/a.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'joonty/vdebug'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
@@ -96,8 +97,6 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Map NERDTree to a Ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
-
-
 " Show status line
 set laststatus=2
 
@@ -115,15 +114,29 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim-hybrid-material  setup
 let g:enable_bold_font = 1
-let g:airline_theme = "gruvbox"
+let g:airline_theme = "hybrid"
 set background=dark
 
-let g:gruvbox_italic=1
-colorscheme gruvbox
-"colorscheme hybrid_material
-"colorscheme base16-default-dark
-"
+colorscheme hybrid
 syntax enable
+
+" Vdebug setup
+"let g:vdebug_options = {}
+"let g:vdebug_options["port"] = 9000
+"let g:vdebug_options["marker_closed_tree"] = '▸'
+"let g:vdebug_options["marker_open_tree"] = '▾'
+"let g:vdebug_options["timeout"] = '20'
+""let g:vdebug_options["on_close"] = 'detach'
+"let g:vdebug_options["break_on_open"] = '1'
+"let g:vdebug_options["ide_key"] = 'PHPSTORM'
+"let g:vdebug_options["continuous_mode"] = '0'
+"let g:vdebug_options["marker_default"] = '⬦'
+"let g:vdebug_options["watch_window_style"] = 'expanded'
+"let g:vdebug_options["debug_file_level"] = '0'
+"let g:vdebug_options["debug_file"] = ''
+"let g:vdebug_options["debug_window_level"] = '0'
+
+
 
 " suggested syntastic
 set statusline+=%#warningmsg#
@@ -132,3 +145,5 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Fix backspace not working properly in some cases
+set backspace=2
