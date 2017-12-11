@@ -238,7 +238,7 @@ bar {
 bindsym $mod+shift+x exec ~/.config/i3/lock.sh #i3lock 
 
 bindsym F1 exec --no-startup-id echo "help" > /dev/null
-bindsym F4 exec sudo systemctl suspend
+bindsym F4 exec systemctl poweroff
 
 ## SCREENSHOTS -> depends: xclip, imagemagic
 # take a screenshot of a screen region and copy it to a clipboard
@@ -272,10 +272,10 @@ exec google-chrome
 #exec firefox
 
 ## $wspace5
-exec pstorm
+#exec pstorm
 
 ## $wspace9
-exec slack
+#exec slack
 exec skypeforlinux
 exec toggltimer
 
