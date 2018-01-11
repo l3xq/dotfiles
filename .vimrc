@@ -21,7 +21,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-scripts/a.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'christoomey/vim-tmux-navigator'
-"Plugin 'joonty/vdebug'
+Plugin 'joonty/vdebug'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
@@ -121,14 +121,15 @@ colorscheme hybrid
 syntax enable
 
 " Vdebug setup
-"let g:vdebug_options = {}
-"let g:vdebug_options["port"] = 9000
+let g:vdebug_options = {}
+let g:vdebug_options["port"] = 9000
 "let g:vdebug_options["marker_closed_tree"] = '▸'
 "let g:vdebug_options["marker_open_tree"] = '▾'
-"let g:vdebug_options["timeout"] = '20'
-""let g:vdebug_options["on_close"] = 'detach'
-"let g:vdebug_options["break_on_open"] = '1'
-"let g:vdebug_options["ide_key"] = 'PHPSTORM'
+let g:vdebug_options["timeout"] = '20'
+let g:vdebug_options["on_close"] = 'detach'
+let g:vdebug_options["break_on_open"] = '0'
+let g:vdebug_options["server"] = '127.0.0.1'
+let g:vdebug_options["ide_key"] = 'PHPSTORM'
 "let g:vdebug_options["continuous_mode"] = '0'
 "let g:vdebug_options["marker_default"] = '⬦'
 "let g:vdebug_options["watch_window_style"] = 'expanded'

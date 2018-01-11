@@ -275,7 +275,7 @@ exec google-chrome
 #exec pstorm
 
 ## $wspace9
-#exec slack
+exec slack
 exec skypeforlinux
 exec toggltimer
 
@@ -286,7 +286,7 @@ exec toggltimer
 exec compton -f
 
 ## Change Wallpaper
-set $backgroundpic /home/kinetik/Pictures/Wallpapers/small-memory-lp.jpg
+set $backgroundpic /home/kinetik/Pictures/Wallpapers/stormy.jpg
 exec_always feh --bg-scale $backgroundpic 
 
 ## Monitor Layout and Settings
