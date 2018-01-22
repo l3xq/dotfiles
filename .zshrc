@@ -105,6 +105,10 @@ setopt interactivecomments
 #    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 #fi
 
+# Alias for py
+alias python=python3
+alias pip=pip3
+
 #tmux fix
 TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
 

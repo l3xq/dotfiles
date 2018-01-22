@@ -286,7 +286,7 @@ exec toggltimer
 exec compton -f
 
 ## Change Wallpaper
-set $backgroundpic /home/kinetik/Pictures/Wallpapers/stormy.jpg
+set $backgroundpic /home/kinetik/Pictures/Wallpapers/small-memory-lp.jpg
 exec_always feh --bg-scale $backgroundpic 
 
 ## Monitor Layout and Settings
