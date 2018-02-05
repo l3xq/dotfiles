@@ -4,6 +4,10 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/kinetik/.oh-my-zsh
 
+# IDE Key for Xdebug for unit testing
+  export XDEBUG_CONFIG="idekey=VSCODE"
+
+  export SUGAR_MOBILE_SDK_HOME=/home/kinetik/Development/sugar-sdk
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes

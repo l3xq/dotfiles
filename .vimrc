@@ -21,7 +21,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-scripts/a.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'joonty/vdebug'
+"Plugin 'joonty/vdebug'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
