@@ -1,18 +1,33 @@
+# ALIAS
+#
+alias gtwww='cd /var/www/html/'
+alias elastic='sh /home/kinetik/development/elastic75/bin/elasticsearch'
+alias gtac='cd /var/www/html/ac-dev.local'
+alias homesteadup='cd ~/Homestead && vagrant up'
+alias homesteaddown='cd ~/Homestead && vagrant halt'
+
+# SSH ALIASES
+alias lab-ssh='ssh upravnik@91.187.132.22'
+
+# Py
+alias python='/usr/bin/python3'
+alias pip='/usr/bin/pip3'
+
+#
+#
+#
+#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/kinetik/.oh-my-zsh
 
-# IDE Key for Xdebug for unit testing
-  export XDEBUG_CONFIG="idekey=VSCODE"
-
-  export SUGAR_MOBILE_SDK_HOME=/home/kinetik/Development/sugar-sdk
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME="honukai"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -44,7 +59,7 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -71,7 +86,7 @@ plugins=(
   pip
   github
   zsh-syntax-highlighting
-  common-aliases
+ # common-aliases
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -84,44 +99,19 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Terminal Colors
-export TERM="xterm-256color"
-if [[ $TERM == xterm  ]]; then TERM=xterm-256color; fi
-
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# allows you to type Bash style comments on your command line
-# # good 'ol Bash
-setopt interactivecomments
-
-# Powerline fonts fix
-#if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh  ]]; then
-#    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
-#fi
-
-# Alias for py
-alias python=python3
-alias pip=pip3
-
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 #tmux fix
 TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-eval `dircolors ~/.dir_colors/dircolors`
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.

@@ -1,8 +1,10 @@
+"return" 2>&- || "exit"
 
 set list
 set listchars=tab:▸\ ,eol:¬
 
 set nocompatible
+filetype off
 
 " Vundle PluginManager
 " *********************************
@@ -21,7 +23,7 @@ Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'vim-scripts/a.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'christoomey/vim-tmux-navigator'
-"Plugin 'joonty/vdebug'
+Plugin 'joonty/vdebug'
 
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-polyglot'
@@ -32,20 +34,21 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 Plugin 'Auto-Pairs'
 Plugin 'matchit.zip'
-"Plugin 'tComment'
-"Plugin 'L9'
-"Plugin 'FuzzyFinder'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
-" FuzzyFinder Ctrl+p
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 
@@ -54,7 +57,6 @@ call vundle#end()
 "
 filetype plugin indent on
 syntax on
-filetype indent on
 
 set number
 set relativenumber
@@ -68,6 +70,12 @@ set softtabstop=0
 set noswapfile
 set nobackup
 set nowrap
+
+"set encoding=utf8
+"set guifont=Anonymice\ Powerline\ 14
+"set guifont=Source\ Code\ Pro\ 14
+"let g:airline_powerline_fonts = 1
+
 
 " Copy current line Shift+y ; like Shift+d deletes current line
 noremap Y y$
@@ -123,20 +131,51 @@ syntax enable
 " Vdebug setup
 let g:vdebug_options = {}
 let g:vdebug_options["port"] = 9000
-"let g:vdebug_options["marker_closed_tree"] = '▸'
-"let g:vdebug_options["marker_open_tree"] = '▾'
+let g:vdebug_options["marker_closed_tree"] = '▸'
+let g:vdebug_options["marker_open_tree"] = '▾'
 let g:vdebug_options["timeout"] = '20'
 let g:vdebug_options["on_close"] = 'detach'
 let g:vdebug_options["break_on_open"] = '0'
 let g:vdebug_options["server"] = '127.0.0.1'
 let g:vdebug_options["ide_key"] = 'PHPSTORM'
 "let g:vdebug_options["continuous_mode"] = '0'
-"let g:vdebug_options["marker_default"] = '⬦'
-"let g:vdebug_options["watch_window_style"] = 'expanded'
+let g:vdebug_options["marker_default"] = '⬦'
+let g:vdebug_options["watch_window_style"] = 'expanded'
 "let g:vdebug_options["debug_file_level"] = '0'
 "let g:vdebug_options["debug_file"] = ''
 "let g:vdebug_options["debug_window_level"] = '0'
 
+" Py PEP8 standards
+"au BufNewFile,BufRead *.py
+"    \ set tabstop=4
+"    \ set softtabstop=4
+"    \ set shiftwidth=4
+"    \ set textwidth=79
+"    \ set expandtab
+"    \ set autoindent
+"    \ set fileformat=unix
+
+" Py whitespace flag
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+"python with virtualenv support
+"py << EOF
+"import os
+"import sys
+"if 'VIRTUAL_ENV' in os.environ:
+"  project_base_dir = os.environ['VIRTUAL_ENV']
+"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"  execfile(activate_this, dict(__file__=activate_this))
+"EOF
+
+let python_highlight_all=1
+
+
+" JS Standards
+"au BufNewFile,BufRead *.js, *.html, *.css
+"    \ set tabstop=2
+"    \ set softtabstop=2
+"    \ set shiftwidth=2
 
 
 " suggested syntastic
