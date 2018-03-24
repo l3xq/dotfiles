@@ -10,6 +10,8 @@ elements=(
 ~/.tmuxStarterScript
 ~/update.sh
 ~/screen_colors.sh
+~/Documents/Vim_COMPILE.md
+
 #DIRS
 ~/.config/i3
 ~/.config/rofi
