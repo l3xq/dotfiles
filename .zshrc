@@ -2,7 +2,7 @@
 #
 alias gtwww='cd /var/www/html/'
 alias elastic='sh /home/kinetik/development/elastic75/bin/elasticsearch'
-alias gtac='cd /var/www/html/ac-dev.local'
+alias gtac='cd /var/www/html/ac-new.local'
 alias homesteadup='cd ~/Homestead && vagrant up'
 alias homesteaddown='cd ~/Homestead && vagrant halt'
 
